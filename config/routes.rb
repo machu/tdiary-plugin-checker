@@ -1,4 +1,6 @@
 TdiaryPluginChecker::Application.routes.draw do
+  resources :t_diary_plugin_files
+
   resources :commits
 
   # The priority is based upon order of creation:

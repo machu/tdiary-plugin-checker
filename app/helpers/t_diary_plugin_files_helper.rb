@@ -1,0 +1,2 @@
+module TDiaryPluginFilesHelper
+end

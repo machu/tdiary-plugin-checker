@@ -1,0 +1,21 @@
+<%= form_for(@t_diary_plugin_file) do |f| %>
+  <% if @t_diary_plugin_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@t_diary_plugin_file.errors.count, "error") %> prohibited this t_diary_plugin_file from being saved:</h2>
+
+      <ul>
+      <% @t_diary_plugin_file.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
