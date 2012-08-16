@@ -3,21 +3,16 @@
 <table>
   <tr>
     <th>Path</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Date</th>
+    <th>Message</th>
   </tr>
 
 <% @t_diary_plugin_files.each do |t_diary_plugin_file| %>
   <tr>
-    <td><%= t_diary_plugin_file.path %></td>
-    <td><%= link_to 'Show', t_diary_plugin_file %></td>
-    <td><%= link_to 'Edit', edit_t_diary_plugin_file_path(t_diary_plugin_file) %></td>
-    <td><%= link_to 'Destroy', t_diary_plugin_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><a href="<%= t_diary_plugin_file.link %>"><%= t_diary_plugin_file.path %></a></td>
+    <td><%= t_diary_plugin_file.commit.date %></td>
+		<td><a href="<%= t_diary_plugin_file.commit.link %>"><%= t_diary_plugin_file.commit.message %></a></td>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New T diary plugin file', new_t_diary_plugin_file_path %>

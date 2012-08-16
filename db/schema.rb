@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815010604) do
+ActiveRecord::Schema.define(:version => 20120815020413) do
 
   create_table "commits", :force => true do |t|
     t.datetime "date"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(:version => 20120815010604) do
     t.string   "tree"
     t.string   "url"
     t.string   "sha"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "t_diary_plugin_files", :force => true do |t|
+    t.integer  "commit_id"
+    t.string   "path"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
