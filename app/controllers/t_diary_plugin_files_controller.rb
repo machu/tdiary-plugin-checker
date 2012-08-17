@@ -8,7 +8,7 @@ class TDiaryPluginFilesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @t_diary_plugin_files.to_json({
-        include: { commit: { only: [:message, :date] } },
+        include: { commit: { only: [:message, :date, :sha] } },
         only: [:path]
       })}
     end
