@@ -1,0 +1,2 @@
+tdiary-plugin-checker
+=====================
