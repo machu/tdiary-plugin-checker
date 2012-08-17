@@ -1,10 +1,10 @@
 <h1>TDiary plugin checker</h1>
 
-<div id="lastupdate">
-	Last Update: 2012-08-10
-</div>
-
 <%= link_to('download JSON file', polymorphic_path(TDiaryPluginFile, :format => :json)) %>
+
+<div id="lastupdate">
+	Last Update: <%= Commit.last_update %>
+</div>
 
 <table cellpadding="0" cellspacing="0">
   <tr>

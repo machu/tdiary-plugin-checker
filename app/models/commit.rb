@@ -27,6 +27,10 @@ class Commit < ActiveRecord::Base
     nil
   end
 
+  def self.last_update
+    Commit.order('updated_at DESC').first.updated_at
+  end
+
   def link
     "https://github.com/tdiary/tdiary-contrib/commit/#{sha}"
   end
